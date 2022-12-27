@@ -10,7 +10,7 @@ const { verifyToken } = require("../middlewares/baseToken");
 
 imgMgmtRoute.get("/users", verifyToken, getDetailUser);
 imgMgmtRoute.get(
-  "/saveimages/:nguoi_dung_id",
+  "/save-images/:nguoi_dung_id",
   verifyToken,
   listSaveImageByUserId
 );
