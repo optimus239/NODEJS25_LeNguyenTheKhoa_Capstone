@@ -1,3 +1,5 @@
+const { failCode } = require("../config/reponse");
+
 //POST thêm ảnh của user
 const uploadImage = async (req, res) => {
   const fs = require("fs");

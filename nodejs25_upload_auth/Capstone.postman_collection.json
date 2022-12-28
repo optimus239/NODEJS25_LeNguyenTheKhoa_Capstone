@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "5fc82003-e42e-450e-a998-ae6880cb0039",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20374015"
+	},
+	"item": [
+		{
+			"name": "đăng ký",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"nguyenvane@gmail.com\",\r\n    \"mat_khau\":\"123456\",\r\n    \"ho_ten\":\"nguyenvance\",\r\n    \"tuoi\":30,\r\n    \"anh_dai_dien\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/users/signup",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "đăng nhập",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"khoa@gmail.com\",\r\n    \"mat_khau\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/users/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sách ảnh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/home/images",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"home",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tìm kiếm danh sách ảnh theo tên",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/home/images/search?keyword=v",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"home",
+						"images",
+						"search"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "keyword",
+							"value": "v"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông tin ảnh và người tạo ảnh bằng id ảnh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/details/image/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"details",
+						"image",
+						"2"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông tin bình luận theo id ảnh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/details/comments/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"details",
+						"comments",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông tin đã lưu hình này chưa theo id ảnh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/details/image/save/9",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"details",
+						"image",
+						"save",
+						"9"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lưu thông tin bình luận của người dùng với hình ảnh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nguoi_dung_id\":5,\r\n    \"hinh_id\":2,\r\n    \"ngay_binh_luan\":\"2022-12-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/details/image/comment",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"details",
+						"image",
+						"comment"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông tin user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/image-management/users",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image-management",
+						"users"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sách ảnh đã lưu theo user id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/image-management/save-images/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image-management",
+						"save-images",
+						"1"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sách ảnh đã  tạo theo user id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/image-management/images/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image-management",
+						"images",
+						"2"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xóa ảnh đã tạo theo id ảnh",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/image-management/images/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image-management",
+						"images",
+						"3"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thêm 1 ảnh của user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/khoa2/OneDrive/Máy tính/data_image/img1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/add-image/upload",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"add-image",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông tin user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"nguyenvaneee@gmail.com\",\r\n    \"mat_khau\":\"1234\",\r\n    \"ho_ten\":\"nguyenvane\",\r\n    \"tuoi\":30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/user/user-management/update-user/7",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-management",
+						"update-user",
+						"7"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

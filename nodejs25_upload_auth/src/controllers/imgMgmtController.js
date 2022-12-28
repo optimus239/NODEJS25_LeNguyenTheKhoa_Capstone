@@ -17,12 +17,19 @@ const getDetailUser = async (req, res) => {
 const listSaveImageByUserId = async (req, res) => {
   try {
     let { nguoi_dung_id } = req.params;
-    let data = await model.luu_anh.findAll({
-      where: {
-        nguoi_dung_id,
-      },
+    let checkUser = await model.nguoi_dung.findOne({
+      where: { nguoi_dung_id },
     });
-    sucessCode(res, data, "Lấy dữ liệu thành công");
+    if (checkUser) {
+      let data = await model.luu_anh.findAll({
+        where: {
+          nguoi_dung_id,
+        },
+      });
+      sucessCode(res, data, "Lấy dữ liệu thành công");
+    } else {
+      failCode(res, "Không tìm thấy id user");
+    }
   } catch (err) {
     errorCode(res, "Lỗi Backend");
   }
@@ -32,12 +39,19 @@ const listSaveImageByUserId = async (req, res) => {
 const listImageByUserId = async (req, res) => {
   try {
     let { nguoi_dung_id } = req.params;
-    let data = await model.hinh_anh.findAll({
-      where: {
-        nguoi_dung_id,
-      },
+    let checkUser = await model.nguoi_dung.findOne({
+      where: { nguoi_dung_id },
     });
-    sucessCode(res, data, "Lấy dữ liệu thành công");
+    if (checkUser) {
+      let data = await model.hinh_anh.findAll({
+        where: {
+          nguoi_dung_id,
+        },
+      });
+      sucessCode(res, data, "Lấy dữ liệu thành công");
+    } else {
+      failCode(res, "Không tìm thấy id user");
+    }
   } catch (err) {
     errorCode(res, "Lỗi Backend");
   }

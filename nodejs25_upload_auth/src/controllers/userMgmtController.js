@@ -3,6 +3,7 @@ const init_models = require("../models/init-models");
 const model = init_models(sequelize);
 const { sucessCode, failCode, errorCode } = require("../config/reponse");
 
+//PUT thông tin cá nhân của user
 const updateUser = async (req, res) => {
   try {
     let { nguoi_dung_id } = req.params;

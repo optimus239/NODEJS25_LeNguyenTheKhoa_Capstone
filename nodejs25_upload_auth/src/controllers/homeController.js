@@ -30,7 +30,6 @@ const getImageByName = async (req, res) => {
         ],
       },
     });
-
     sucessCode(res, data, "Lấy dữ liệu ảnh thành công");
   } catch (err) {
     errorCode(res, "Lỗi Backend");
