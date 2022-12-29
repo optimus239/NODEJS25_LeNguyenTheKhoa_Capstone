@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "5fc82003-e42e-450e-a998-ae6880cb0039",
-		"name": "Capstone",
+		"name": "Capstone_nodejs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20374015"
 	},
@@ -21,13 +21,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/users/signup",
+					"raw": "{{domain}}/api/user/signup",
 					"host": [
 						"{{domain}}"
 					],
 					"path": [
 						"api",
-						"users",
+						"user",
 						"signup"
 					]
 				}
@@ -49,13 +49,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/users/login",
+					"raw": "{{domain}}/api/user/login",
 					"host": [
 						"{{domain}}"
 					],
 					"path": [
 						"api",
-						"users",
+						"user",
 						"login"
 					]
 				}
@@ -172,7 +172,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/details/image/2",
+					"raw": "{{domain}}/api/details/image/6",
 					"host": [
 						"{{domain}}"
 					],
@@ -180,7 +180,7 @@
 						"api",
 						"details",
 						"image",
-						"2"
+						"6"
 					],
 					"query": [
 						{
@@ -217,7 +217,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/details/comments/1",
+					"raw": "{{domain}}/api/details/comments/2",
 					"host": [
 						"{{domain}}"
 					],
@@ -225,7 +225,7 @@
 						"api",
 						"details",
 						"comments",
-						"1"
+						"2"
 					],
 					"query": [
 						{
@@ -439,7 +439,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/image-management/images/2",
+					"raw": "{{domain}}/api/image-management/images/1",
 					"host": [
 						"{{domain}}"
 					],
@@ -447,7 +447,7 @@
 						"api",
 						"image-management",
 						"images",
-						"2"
+						"1"
 					],
 					"query": [
 						{
@@ -481,7 +481,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/image-management/images/3",
+					"raw": "{{domain}}/api/image-management/images/10",
 					"host": [
 						"{{domain}}"
 					],
@@ -489,7 +489,7 @@
 						"api",
 						"image-management",
 						"images",
-						"3"
+						"10"
 					],
 					"query": [
 						{
@@ -557,7 +557,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"nguyenvaneee@gmail.com\",\r\n    \"mat_khau\":\"1234\",\r\n    \"ho_ten\":\"nguyenvane\",\r\n    \"tuoi\":30\r\n}",
+					"raw": "{\r\n    \"email\":\"nguyenvane@gmail.com\",\r\n    \"mat_khau\":\"1234\",\r\n    \"ho_ten\":\"nguyenvane\",\r\n    \"tuoi\":30\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -565,7 +565,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/api/user/user-management/update-user/7",
+					"raw": "{{domain}}/api/user/user-management/update-user/12",
 					"host": [
 						"{{domain}}"
 					],
@@ -574,7 +574,7 @@
 						"user",
 						"user-management",
 						"update-user",
-						"7"
+						"12"
 					],
 					"query": [
 						{
